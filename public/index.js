@@ -32,11 +32,12 @@
  * </article>
  */
 function insertNewTwit(twitText, twitAuthor) {
+  /* set twit context */
   var twitContext = {
     "text": twitText,
     "author": twitAuthor
   };
-
+  /* generate template and add to DOM */
   var twitHTML = Handlebars.templates.twit(twitContext);
   var twitContainer = document.getElementsByClassName('twit-container')
   twitContainer[0].insertAdjacentHTML('beforeend', twitHTML)
